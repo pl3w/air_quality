@@ -27,7 +27,7 @@
 
 
 # How to use
-## 取得該小時數據 
+## [取得該小時數據](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_special_data_api_v1__sitename___option__get)
 `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/`
 
 ## 取得歷史資料
