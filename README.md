@@ -28,7 +28,158 @@
 
 # How to use
 ## [取得該小時數據](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_special_data_api_v1__sitename___option__get)
-`https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/`
+* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/`
+```
+Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
 
-## 取得歷史資料
-`https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/{start}/{end}/`
+>>> import requests
+>>> res = requests.get("https://airqualityfastapi.herokuapp.com/api/v1/kinmen/pm25/")
+>>> print(res.json()['data'])
+[{'sitename': '金門', 'pm25': 42, 'publishtime': '2022-09-19T12:00:00'}]
+>>> 
+
+```
+
+## [取得歷史資料](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_data_with_time_interval_api_v1__sitename___option___start_time___end_time__get)
+* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/{start}/{end}/`
+資料始於2022-09-17 00:00:00 <br>
+時間格式:`%YY%mm%dd%HH`<br>
+```
+Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
+[Clang 12.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import requests
+>>> res = requests.get("https://airqualityfastapi.herokuapp.com/api/v1/kinmen/pm25/2022091700/2022091800")
+>>> print(res.json()["data"])
+[
+    {
+      "sitename": "金門",
+      "pm25": 7,
+      "publishtime": "2022-09-17T00:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 6,
+      "publishtime": "2022-09-17T01:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 7,
+      "publishtime": "2022-09-17T02:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 7,
+      "publishtime": "2022-09-17T03:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 12,
+      "publishtime": "2022-09-17T04:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 16,
+      "publishtime": "2022-09-17T05:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 13,
+      "publishtime": "2022-09-17T06:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 16,
+      "publishtime": "2022-09-17T07:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 23,
+      "publishtime": "2022-09-17T08:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 11,
+      "publishtime": "2022-09-17T09:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 9,
+      "publishtime": "2022-09-17T10:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 8,
+      "publishtime": "2022-09-17T11:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 17,
+      "publishtime": "2022-09-17T12:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 9,
+      "publishtime": "2022-09-17T13:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 7,
+      "publishtime": "2022-09-17T14:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 7,
+      "publishtime": "2022-09-17T15:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 14,
+      "publishtime": "2022-09-17T16:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 9,
+      "publishtime": "2022-09-17T17:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 9,
+      "publishtime": "2022-09-17T18:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 11,
+      "publishtime": "2022-09-17T19:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 11,
+      "publishtime": "2022-09-17T20:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 11,
+      "publishtime": "2022-09-17T21:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 10,
+      "publishtime": "2022-09-17T22:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 12,
+      "publishtime": "2022-09-17T23:00:00"
+    },
+    {
+      "sitename": "金門",
+      "pm25": 10,
+      "publishtime": "2022-09-18T00:00:00"
+    }
+]
+>>> 
+
+```
