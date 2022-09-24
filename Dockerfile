@@ -1,11 +1,11 @@
-FROM python:3.9
+FROM continuumio/miniconda3
 
-RUN mkdir /api
+RUN apt-get update
 
-COPY /src/fastapi_demo /api/
+RUN mkdir /air_quality
 
-WORKDIR /api/
+COPY . /air_quality
+WORKDIR /air_quality
 
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+RUN pip install pipenv 
+RUN pipenv sync

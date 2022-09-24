@@ -43,7 +43,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 ## [取得歷史資料](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_data_with_time_interval_api_v1__sitename___option___start_time___end_time__get)
-* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/{start}/{end}/`
+* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/{start}/{end}/`<br>
 資料始於2022-09-17 00:00:00 <br>
 時間格式:`%YY%mm%dd%HH`<br>
 ```
