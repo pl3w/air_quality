@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+  scheduler:
+    image: crawler:1.0.4
+    hostname: "aqi"
+    command: pipenv run python src/aqidata/scheduler.py
+    environment:
+      - TZ=Asia/Taipei
+    networks:
+      - aqi_net
+
+networks:
+  aqi_net:
+    external: true
