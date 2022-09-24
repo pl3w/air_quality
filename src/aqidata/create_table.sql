@@ -1,0 +1,22 @@
+CREATE TABLE `sitedata` (
+    `sitename` VARCHAR(50) NOT NULL,
+    `aqi` SMALLINT,
+    `pollutant` VARCHAR(50),
+    `status` VARCHAR(20),
+    `so2` FLOAT,
+    `co` FLOAT,
+    `o3` FLOAT,
+    `o3_8hr` FLOAT,
+    `pm10` SMALLINT,
+    `pm25` SMALLINT,
+    `no2` FLOAT,
+    `nox` FLOAT,
+    `no` FLOAT,
+    `wind_speed` FLOAT,
+    `wind_direc` SMALLINT,
+    `publishtime` DATETIME NOT NULL,
+    `co_8hr` FLOAT,
+    `pm25_avg` SMALLINT,
+    `pm10_avg` SMALLINT,
+    `so2_avg` SMALLINT
+)
