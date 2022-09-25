@@ -6,11 +6,11 @@ services:
     command: pipenv run python src/aqidata/scheduler.py
     environment:
       - TZ=Asia/Taipei
-    deploy:
-      mode: replicated
-      replicas: 1
-      placement: 
-          constraints: [node.labels.crawler_scheduler == true]
+    # deploy:
+    #   mode: replicated
+    #   replicas: 1
+    #   placement: 
+    #       constraints: [node.labels.crawler_scheduler == true]
     networks:
       - aqi_net
 
