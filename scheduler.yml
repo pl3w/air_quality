@@ -1,11 +1,16 @@
 version: "3.0"
 services:
   scheduler:
-    image: pl3w/crawler:1.0.4
+    image: crawler:1.0.5
     hostname: "aqi"
     command: pipenv run python src/aqidata/scheduler.py
     environment:
       - TZ=Asia/Taipei
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement: 
+          constraints: [node.labels.crawler_scheduler == true]
     networks:
       - aqi_net
 
