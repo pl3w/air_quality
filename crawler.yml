@@ -8,11 +8,11 @@ services:
     # restart: always
     environment:
       - TZ=Asia/Taipei
-    # deploy:
-    #   mode: replicated
-    #   replicas: 1
-    #   placement: 
-    #       constraints: [node.labels.crawler_aqi == true]
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement: 
+          constraints: [node.labels.crawler_aqi == true]
     networks:
       - aqi_net
 

@@ -13,11 +13,11 @@ services:
             MYSQL_ROOT_PASSWORD: 1234
         volumes:
             - /var/lib/docker/volumes/mysql/_data:/var/lib/mysql
-        # deploy:
-        #     mode: replicated
-        #     replicas: 1
-        #     placement: 
-        #         constraints: [node.labels.mysql == true]
+        deploy:
+            mode: replicated
+            replicas: 1
+            placement: 
+                constraints: [node.labels.mysql == true]
         networks:
             - aqi_net
 
@@ -28,18 +28,18 @@ services:
             - mysql:db
         ports:
             - "8000:80"
-        # environment:
-        #     MYSQL_USER: pl3w
-        #     MYSQL_PASSWORD: Pbw101031
-        #     MYSQL_ROOT_PASSWORD: 1234
-        #     PMA_HOST: mysql
+        environment:
+            MYSQL_USER: pl3w
+            MYSQL_PASSWORD: Pbw101031
+            MYSQL_ROOT_PASSWORD: 1234
+            PMA_HOST: mysql
         depends_on:
             - mysql
-        # deploy:
-        #     mode: replicated
-        #     replicas: 1
-        #     placement: 
-        #         constraints: [node.labels.mysql == true]
+        deploy:
+            mode: replicated
+            replicas: 1
+            placement: 
+                constraints: [node.labels.mysql == true]
         networks:
             - aqi_net
 
