@@ -2,7 +2,7 @@ version: "3.0"
 
 services:
   data_crawler:
-    image: crawler:1.0.4
+    image: pl3w/crawler:1.0.4
     hostname: "aqi"
     command: pipenv run python src/aqidata/crawler.py
     # restart: always

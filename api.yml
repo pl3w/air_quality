@@ -1,9 +1,9 @@
 version: "3.0"
 services:
-  scheduler:
-    image: pl3w/crawler:1.0.4
+  api:
+    image: crawler:1.0.5
     hostname: "aqi"
-    command: pipenv run python src/aqidata/scheduler.py
+    command : pipenv run uvicorn src.api.main:app --reload --port 9000
     environment:
       - TZ=Asia/Taipei
     networks:
@@ -12,3 +12,5 @@ services:
 networks:
   aqi_net:
     external: true
+
+    

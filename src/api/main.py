@@ -1,15 +1,19 @@
 from fastapi import FastAPI
 import datetime
-import psycopg2
+import pandas as pd
 from asyncio.log import logger
+from sqlalchemy import create_engine, engine
 
 
 app = FastAPI()
 
 
-# Connect to db.
-conn = psycopg2.connect(database="postgres", user="postgres", password="Pbw101031", host="airqualitydbv2.ccy27k19fmyr.ap-northeast-1.rds.amazonaws.com", port="5432")
-cur = conn.cursor()
+# Connect db.
+def get_conn():
+    address = "mysql+pymysql://pl3w:Pbw101031@mysql:3306/aqidb"
+    engine = create_engine(address)
+    return engine.connect()
+
 
 # Set current time.
 def current_time():
@@ -26,15 +30,18 @@ def current_time():
 
 
 # Transfer eng site name to chinese site name.
-def get_sitename(sitename: str):
+def get_sitename(
+    sitename: str,
+    conn: engine.base.Connection
+):
 
     string = f"""
     select sitename from site
     where sitename = '{sitename}'
     or eng_name = '{sitename}'
     """
-    cur.execute(string)
-    return cur.fetchall()
+    site = pd.read_sql(string, conn)
+    return site.to_dict("records")
 
 
 # Dict to json
@@ -53,25 +60,29 @@ def index():
 
 
 @app.get('/api/v1/{sitename}/{option}')
-def get_site_special_data(sitename: str, option: str):
+def get_site_special_data(
+    sitename: str,
+    option: str
+):
 
-    site = get_sitename(sitename)
+    conn = get_conn()
+
+    site = get_sitename(sitename, conn)
 
     # Current time
     date = current_time()
 
     string = f"""
-    select json_build_object('sitename', sitename, '{option}', {option}, 'publishtime', publishtime) from sitedata
-    where publishtime = '{date}'
-    and sitename = '{site[0][0]}'
+    select sitename, {option}, publishtime from `sitedata` 
+    where publishtime = '{date}' 
+    and sitename = '{site[0]['sitename']}' 
     """
 
     try:
-        cur.execute(string)
-        data = serializer(cur.fetchall())
+        data_df = pd.read_sql(string, con=conn)
+        data = data_df.to_dict("records")
 
     except Exception as e:
-        cur.execute("ROLLBACK;")
         data = logger.info(e)
 
     return{
@@ -80,73 +91,35 @@ def get_site_special_data(sitename: str, option: str):
 
 
 @app.get('/api/v1/{sitename}/{option}/{start_time}/{end_time}')
-def get_site_data_with_time_interval(sitename: str, option: str, start_time: str, end_time: str):
+def get_site_data_with_time_interval(
+    sitename: str,
+    option: str,
+    start_time: str,
+    end_time: str
+):
+
+    conn = get_conn()
     
-    site = get_sitename(sitename)
+    site = get_sitename(sitename, conn)
 
     start = datetime.datetime.strptime(start_time, "%Y%m%d%H")
     end = datetime.datetime.strptime(end_time, "%Y%m%d%H")
 
-    print(start, end)
-
     string = f"""
-    select json_build_object('sitename', sitename, '{option}', {option}, 'publishtime', publishtime) from sitedata
-    where sitename = '{site[0][0]}'
+    select sitename, {option}, publishtime from `sitedata`
+    where sitename = '{site[0]['sitename']}'
     and publishtime between '{start}'
     and '{end}'
     """
 
     try:
-        cur.execute(string)
-        data = serializer(cur.fetchall())
+        data_df = pd.read_sql(string, con=conn)
+        data = data_df.to_dict("records")
 
     except Exception as e: 
-        cur.execute("ROLLBACK;")
         data = logger.info(e)
 
     return{
         'data': data
     }
 
-
-# Insert user linenotify token into db.
-@app.get('/api/v1/{token}/{sitename}/{elements}/{limit_value}/')
-def create_alert_message(token: str, sitename: str, elements: str, limit_value: float):
-
-    string = f"""
-    insert into linenotify (usertoken, sitename, elements, limitvalue) VALUES ('{token}', '{sitename}', '{elements}', '{limit_value}')
-    """
-
-    try:
-        cur.execute(string)
-        conn.commit()
-        data = {"Successful"}
-
-    except:
-        cur.execute("ROLLBACK;")
-        data = {"error"}
-
-    return{
-        'data': data
-    }
-
-
-#  Delete user linenotify token from db. 
-@app.get('/api/v1/{token}')
-def delete_alert_message(token: str):
-
-    string = f"""delete from linenotify where usertoken = '{token}'"""
-
-
-    try:
-        cur.execute(string)
-        conn.commit()
-        data = {'Successful'}
-    
-    except:
-        cur.execute("ROLLBACK;")
-        data = {'error'}
-
-    return{
-        'data': data
-    }
