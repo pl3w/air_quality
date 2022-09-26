@@ -1,4 +1,4 @@
-# Air Quality Index (AQI)
+# PBWeather
 
 # 提供的數據
 * aqi (空氣品質指標)
@@ -22,8 +22,91 @@
 * so2_avg (二氧化硫平均濃度)
 
 
-# 測站
-[彰化(員林):yuanlin]()、[高雄(湖內):hunei]()、[臺南(麻豆):madou]()、[屏東(琉球):liuqiu]()、[桃園(三民):sanmin]()、[新北(樹林):shulin]()、[臺南(學甲):xuejia]()、[屏東(枋寮):fangliao]()、[基隆:keelung]()、[汐止:xizhi]()、[萬里:wanli]()、[新店:xindian]()、[土城:tucheng]()、[板橋:banqiao]()、[新莊:xinzhuang]()、[馬祖:matsu]()、[金門:kinmen]()、[馬公:magong]()、[關山:guanshan]()、[麥寮:mailiao]()、[菜寮:cailiao]()、[林口:linkou]()、[淡水:tamsui]()、[士林:shilin]()、[中山:zhongshan]()、[萬華:wanhua]()、[古亭:guting]()、[松山:songshan]()、[大同:datong]()、[桃園:taoyuan]()、[大園:dayuan]()、[觀音:guanyin]()、[平鎮:pingzhen]()、[龍潭:longtan]()、[湖口:hukou]()、[竹東:zhudong]()、[新竹:hsinchu]()、[頭份:toufen]()、[苗栗:miaoli]()、[三義:sanyi]()、[豐原:fengyuan]()、[沙鹿:shalu]()、[大里:dali]()、[忠明:zhongming]()、[西屯:xitun]()、[彰化:changhua]()、[線西:xianxi]()、[二林:erlin]()、[南投:nantou]()、[斗六:douliu]()、[崙背:lunbei]()、[新港:xingang]()、[朴子:puzi]()、[臺西:taixi]()、[嘉義:chiayi]()、[新營:sinying]()、[善化:shanhua]()、[安南:annan]()、[臺南:tainan]()、[美濃:meinong]()、[橋頭:qiaotou]()、[仁武:renwu]()、[鳳山:fengshan]()、[大寮:daliao]()、[林園:linyuan]()、[楠梓:nanzi]()、[左營:zuoying]()、[前金:qianjin]()、[小港:xiaogang]()、[屏東:pingtung]()、[潮州:chaozhou]()、[恆春:hengchun]()、[臺東:taitung]()、[花蓮:hualien]()、[陽明:yangming]()、[宜蘭:yilan]()、[冬山:dongshan]()、[三重:sanchong]()、[中壢:zhongli]()、[竹山:zhushan]()、[永和:yonghe]()、[復興:fuxing]()、[埔里:puli]()、[富貴角:fuguijiao]()、[大城:dacheng]()
+# 所有測站
+[彰化(員林):yuanlin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[高雄(湖內):hunei]()、[臺南(麻豆):madou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[屏東(琉球):liuqiu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[桃園(三民):sanmin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新北(樹林):shulin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[臺南(學甲):xuejia](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[屏東(枋寮):fangliao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[基隆:keelung](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[汐止:xizhi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[萬里:wanli](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新店:xindian](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[土城:tucheng](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[板橋:banqiao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新莊:xinzhuang](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[馬祖:matsu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[金門:kinmen](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[馬公:magong](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[關山:guanshan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[麥寮:mailiao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[菜寮:cailiao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[林口:linkou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[淡水:tamsui](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[士林:shilin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[中山:zhongshan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[萬華:wanhua](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[古亭:guting](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[松山:songshan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[大同:datong](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[桃園:taoyuan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[大園:dayuan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[觀音:guanyin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[平鎮:pingzhen](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[龍潭:longtan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[湖口:hukou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[竹東:zhudong](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新竹:hsinchu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[頭份:toufen](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[苗栗:miaoli](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[三義:sanyi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[豐原:fengyuan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[沙鹿:shalu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[大里:dali](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[忠明:zhongming](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[西屯:xitun](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[彰化:changhua](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[線西:xianxi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[二林:erlin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[南投:nantou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[斗六:douliu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[崙背:lunbei](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新港:xingang](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[朴子:puzi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[臺西:taixi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[嘉義:chiayi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[新營:sinying](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[善化:shanhua](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[安南:annan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[臺南:tainan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[美濃:meinong](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[橋頭:qiaotou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[仁武:renwu](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[鳳山:fengshan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[大寮:daliao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[林園:linyuan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[楠梓:nanzi](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[左營:zuoying](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[前金:qianjin](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[小港:xiaogang](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[屏東:pingtung](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[潮州:chaozhou](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[恆春:hengchun](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[臺東:taitung](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[花蓮:hualien](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[陽明:yangming](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[宜蘭:yilan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[冬山:dongshan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[三重:sanchong](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[中壢:zhongli](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[竹山:zhushan](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[永和:yonghe](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[復興:fuxing](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[埔里:puli](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[富貴角:fuguijiao](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)、
+[大城:dacheng](https://github.com/pl3w/air_quality#%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B8%E6%93%9A)
 
 
 # How to use
