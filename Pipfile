@@ -17,6 +17,7 @@ docker-compose = "*"
 pymysql = "*"
 apscheduler = "*"
 loguru = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

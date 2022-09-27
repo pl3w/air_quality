@@ -5,6 +5,7 @@ import time
 import pandas as pd
 
 from router import Router
+from config import MY_API_KEY
 
 
 def check_data_isexist(current: str):
@@ -37,7 +38,7 @@ def check_data_isexist(current: str):
 # Get AQI data
 def get_data():
     # Request data
-    response = requests.get("https://data.epa.gov.tw/api/v2/aqx_p_432?format=json&api_key=2cb603b2-1507-46c8-85c0-93e5107d773d")
+    response = requests.get(f"https://data.epa.gov.tw/api/v2/aqx_p_432?format=json&api_key={MY_API_KEY}")
 
     # Check error.
     try:
@@ -95,10 +96,12 @@ def store_data(df):
     # If data already exist -> wait 30 min
     else:
         if datetime.datetime.now().minute < 35:
+            print("Wait open data update...")
             time.sleep(300)
             get_data()
 
         else:
+            print("Update error!")
             return{
                 "result": "Data already exist"
             }

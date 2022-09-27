@@ -9,3 +9,5 @@ WORKDIR /air_quality
 
 RUN pip install pipenv 
 RUN pipenv sync
+
+RUN VERSION=RELESE python genenv.py
