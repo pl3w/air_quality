@@ -111,31 +111,31 @@
 
 
 # How to use
-## [取得該小時數據](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_special_data_api_v1__sitename___option__get)
-* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/`
+## [取得該小時數據](http://pbweather.ddns.net/docs#/default/get_site_special_data_api_v1__sitename___option__get)
+* `http://pbweather.ddns.net/api/v1/{sitename}/{options}/`
 ```
 Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
 [Clang 12.0.0 ] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 
 >>> import requests
->>> res = requests.get("https://airqualityfastapi.herokuapp.com/api/v1/kinmen/pm25/")
+>>> res = requests.get("http://pbweather.ddns.net/api/v1/kinmen/pm25/")
 >>> print(res.json()['data'])
 [{'sitename': '金門', 'pm25': 42, 'publishtime': '2022-09-19T12:00:00'}]
 >>> 
 
 ```
 
-## [取得歷史資料](https://airqualityfastapi.herokuapp.com/docs#/default/get_site_data_with_time_interval_api_v1__sitename___option___start_time___end_time__get)
-* `https://airqualityfastapi.herokuapp.com/api/v1/{sitename}/{options}/{start}/{end}/`<br>
-資料始於2022-09-17 00:00:00 <br>
+## [取得歷史資料](http://pbweather.ddns.net/docs#/default/get_site_data_with_time_interval_api_v1__sitename___option___start_time___end_time__get)
+* `http://pbweather.ddns.net/api/v1/{sitename}/{options}/{start}/{end}/`<br>
+資料始於2022-09-25 00:00:00 <br>
 時間格式:`%YY%mm%dd%HH`<br>
 ```
 Python 3.9.12 (main, Apr  5 2022, 01:53:17) 
 [Clang 12.0.0 ] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import requests
->>> res = requests.get("https://airqualityfastapi.herokuapp.com/api/v1/kinmen/pm25/2022091700/2022091800")
+>>> res = requests.get("http://pbweather.ddns.net/api/v1/kinmen/pm25/2022091700/2022091800")
 >>> print(res.json()["data"])
 [
     {
